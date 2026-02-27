@@ -1,0 +1,45 @@
+﻿
+> alma-uova-app@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 3.9s
+  Running TypeScript ...
+node.exe : Failed to compile.
+In riga:1 car:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( 
+   Failed to compile.:String) [], RemoteExce  
+  ption
+    + FullyQualifiedErrorId : NativeCommandEr 
+   ror
+ 
+
+./components/ui/EditableText.tsx:9:21
+Type error: Cannot find namespace 'JSX'.
+
+[0m [90m  7 |[39m     onSave[33m:[39m 
+(value[33m:[39m string) [33m=>[39m 
+[36mvoid[39m[33m;[39m
+ [90m  8 |[39m     isEditing[33m:[39m 
+boolean[33m;[39m
+[31m[1m>[22m[39m[90m  9 |[39m     
+tagName[33m?[39m[33m:[39m keyof [33mJSX[
+39m[33m.[39m[33mIntrinsicElements[39m[33m
+;[39m
+ [90m    |[39m                     
+[31m[1m^[22m[39m
+ [90m 10 |[39m     
+className[33m?[39m[33m:[39m 
+string[33m;[39m
+ [90m 11 |[39m     
+multiline[33m?[39m[33m:[39m 
+boolean[33m;[39m
+ [90m 12 |[39m }[0m
+Next.js build worker exited with code: 1 and 
+signal: null
