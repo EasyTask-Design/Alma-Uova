@@ -1,14 +1,14 @@
 {
-    "texts": {
-        "title": "Oltre i competitor. <br>\n<span class=\"amber-accent italic uppercase text-3xl md:text-5xl\">L'essenza dell'uovo veneto.</span>",
-        "subtitle": "Dopo un'analisi approfondita dei video dei migliori concorrenti nel settore, abbiamo definito un posizionamento che distacca Alma Uova dal banale e punta sulla verità del territorio e della performance."
-    },
-    "media": {
-        "step1": "",
-        "step2": "",
-        "step3": "",
-        "step4": "",
-        "step5": "",
-        "step6": ""
-    }
+  "texts": {
+    "title": "Oltre i competitor. <br>\n<span class=\"amber-accent italic uppercase text-3xl md:text-5xl\">L'essenza dell'uovo veneto.</span>",
+    "subtitle": "Dopo un'analisi approfondita dei video dei migliori concorrenti nel settore, abbiamo definito un posizionamento che distacca Alma Uova dal banale e punta sulla verità del territorio e della performance."
+  },
+  "media": {
+    "step1": "/uploads/1772192103265_Powered by Eggs - Australian Eggs (1080p, h264).mp4",
+    "step2": "",
+    "step3": "",
+    "step4": "",
+    "step5": "",
+    "step6": ""
+  }
 }
