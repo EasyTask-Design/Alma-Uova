@@ -130,39 +130,30 @@ function PresentationContent() {
                     Analisi di Mercato & Strategia Creativa
                 </div>
 
-                <EditableText
-                    tagName="h1"
-                    initialValue={data.texts.title}
-                    onSave={(val) => handleSaveText('title', val)}
-                    isEditing={isEditing}
-                    multiline={true}
-                    className="text-4xl md:text-6xl font-black mb-6 leading-none tracking-tighter"
-                />
+                <h1 className="text-4xl md:text-6xl font-black mb-6 leading-none tracking-tighter">
+        ALMA UOVA <br/><span className="amber-accent italic uppercase text-3xl md:text-5xl">Eccellenza Veneta, Energia Quotidiana.</span>
+    </h1>
 
-                <EditableText
-                    tagName="p"
-                    initialValue={data.texts.subtitle}
-                    onSave={(val) => handleSaveText('subtitle', val)}
-                    isEditing={isEditing}
-                    multiline={true}
-                    className="text-lg text-slate-600 font-medium max-w-xl mx-auto"
-                />
+                <div className="text-sm md:text-base text-slate-600 font-medium max-w-3xl mx-auto text-left leading-relaxed space-y-4">
+    <p>Ho iniziato facendo ricerca, raccogliendo tutti gli spot commerciali per le uova e simili, italiani e stranieri. I migliori concorrenti del settore hanno altri budget ma possiamo comunque estrarre le cose migliori dai loro e vedere come comunicano i Big del settore.</p>
+    <p><strong>Osservazioni:</strong> 30 secondi per una pubblicità sono tanti, trattenere l'attenzione e raccontare una storia che non ci si annoia ad ascoltare sono i nostri due punti fondamentali, così come veicolare il nostro messaggio nel modo giusto. Il ritmo del video è dato dalla Musica e voiceover che con le diverse scene e stacchi trasportano l'osservatore fino alla fine del video.</p>
+</div>
             </header>
 
             
-            <section className="px-4 mb-16">
+                        <section className="px-4 mb-16">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">SU COSA PUNTARE</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {[
                             'LO SPORT',
-                            'POTENZIALITà',
+                            'POTENZIALITÀ',
                             'LA NUTRIZIONE (PROTEINE)',
                             'LA SELEZIONE E CURA (LAVORO E IMPEGNO)',
                             'LA FAMIGLIA',
                             'IL VENETO'
                         ].map((item, idx) => (
-                            <div key={idx} className="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 flex items-center justify-center text-center">
+                            <div key={idx} className="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 flex items-center justify-center text-center h-full">
                                 <h3 className="font-black uppercase text-sm tracking-tighter amber-text">{item}</h3>
                             </div>
                         ))}
@@ -170,22 +161,14 @@ function PresentationContent() {
                 </div>
             </section>
 
-            
-            {/* Sezione Competitor Slider */}
-            
             {/* Sezione Competitor Slider */}
             <section className="px-4 mb-20">
                 <div className="max-w-5xl mx-auto">
-                    <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">Analisi Competitor</h2>
-                    <p className="text-center text-slate-500 text-sm mb-10 max-w-3xl mx-auto">
-                        I migliori concorrenti del settore hanno altri budget ma possiamo comunque estrarre le cose migliori dai loro e vedere come comunicano i Big del settore.<br/><br/>
-                        <strong>Osservazioni:</strong> 30 secondi per una pubblicità sono tanti, trattenere l’attenzione e raccontare una storia che non ci si annoia ad ascoltare sono i nostri due punti fondamentali, così come veicolare il nostro messaggio nel modo giusto. Il ritmo del video è dato dalla Musica e voiceover che con le diverse scene e stacchi trasportano l’osservatore fino alla fine del video.
-                    </p>
-                    
+                    <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Analisi Competitor</h2>
                     <div className="flex overflow-x-auto pb-8 gap-6 snap-x scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                         {[1, 2, 3, 4, 5].map((num) => (
                             <div key={num} className="min-w-[300px] md:min-w-[400px] snap-center bg-white rounded-[2.5rem] border border-slate-100 shadow-sm p-5">
-                                <div className="aspect-video bg-slate-200 rounded-[2rem] mb-4 overflow-hidden flex items-center justify-center">
+                                <div className="aspect-[9/16] bg-slate-200 rounded-[2rem] mb-4 overflow-hidden flex items-center justify-center">
                                     <MediaUploader
                                         initialUrl={data.media[`compVideo${num}`] || ''}
                                         onUploadSuccess={(url) => handleMediaUpload(`compVideo${num}`, url)}
@@ -210,7 +193,9 @@ function PresentationContent() {
                     </div>
                 </div>
             </section>
-<section className="px-4 mb-20">
+
+            {/* Sezione Storyboard Spot 30" */}
+            <section className="px-4 mb-20">
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Storyboard Spot 30"</h2>
 
@@ -337,8 +322,8 @@ function PresentationContent() {
                     </div>
                 </div>
             </section>
-            {/* Sezione Music & Sound Design */}
-            
+
+            {/* Sezione Music & Sound Selection */}
             <section className="px-4 mb-20 bg-slate-50 py-16 rounded-[3rem] border border-slate-100">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">Music & Sound Selection</h2>
@@ -365,17 +350,7 @@ function PresentationContent() {
                                         initialUrl={data.media[`musicFile${num}`] || ''}
                                         onUploadSuccess={(url) => handleMediaUpload(`musicFile${num}`, url)}
                                         isEditing={isEditing}
-                                        placeholderText="Carica Audio mp3"
-                                    />
-                                </div>
-
-                                <div className="w-full">
-                                    <EditableText
-                                        tagName="p"
-                                        initialValue={data.texts[`musicLink${num}`] || 'Link esterno'}
-                                        onSave={(val) => handleSaveText(`musicLink${num}`, val)}
-                                        isEditing={isEditing}
-                                        className="text-[10px] text-slate-400 text-center break-all"
+                                        placeholderText="Carica File MP3"
                                     />
                                 </div>
                             </div>
@@ -384,99 +359,18 @@ function PresentationContent() {
                 </div>
             </section>
 
-
-            
-            {/* Sezione Proposte Musicali */}
-            <section className="px-4 mb-20">
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Proposte Soundtrack & Jingle</h2>
-                    <div className="space-y-6">
-                        {[1, 2, 3].map(num => (
-                            <div key={num} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col gap-4">
-                                <EditableText
-                                    tagName="h4"
-                                    initialValue={data.texts[`musicTitle${num}`] || `Proposta Audio ${num}`}
-                                    onSave={(val) => handleSaveText(`musicTitle${num}`, val)}
-                                    isEditing={isEditing}
-                                    className="font-bold text-lg"
-                                />
-                                <EditableText
-                                    tagName="p"
-                                    initialValue={data.texts[`musicLink${num}`] || ""}
-                                    onSave={(val) => handleSaveText(`musicLink${num}`, val)}
-                                    isEditing={isEditing}
-                                    placeholder="[Opzionale] Incolla qui un link (Spotify, YouTube, ecc...)"
-                                    className="text-sm text-blue-500 underline"
-                                    multiline={true}
-                                />
-                                <div className="h-24 bg-slate-50 rounded-xl flex items-center justify-center overflow-hidden border border-dashed border-slate-200">
-                                    <MediaUploader
-                                        initialUrl={data.media[`musicFile${num}`] || ''}
-                                        onUploadSuccess={(url) => handleMediaUpload(`musicFile${num}`, url)}
-                                        isEditing={isEditing}
-                                        placeholderText="[Carica file audio MP3/WAV]"
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            
-            {/* Sezione Audio / Canzoni */}
-            <section className="px-4 mb-20">
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">Moodboard Audio</h2>
-                    <p className="text-center text-slate-500 text-xs mb-10 uppercase tracking-widest">Brani di riferimento per il Sound Design</p>
-                    
-                    <div className="space-y-6">
-                        {[1, 2, 3].map((num) => (
-                            <div key={num} className="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col md:flex-row items-center gap-6">
-                                <div className="w-full md:w-1/4 h-24 bg-slate-100 rounded-2xl flex items-center justify-center overflow-hidden">
-                                    <MediaUploader
-                                        initialUrl={data.media[`audio${num}`] || ''}
-                                        onUploadSuccess={(url) => handleMediaUpload(`audio${num}`, url)}
-                                        isEditing={isEditing}
-                                        placeholderText={`[Traccia ${num}]`}
-                                    />
-                                </div>
-                                <div className="w-full md:w-3/4">
-                                    <EditableText
-                                        tagName="h4"
-                                        initialValue={data.texts[`audioTitle${num}`] || `Titolo Canzone ${num}`}
-                                        onSave={(val) => handleSaveText(`audioTitle${num}`, val)}
-                                        isEditing={isEditing}
-                                        className="font-black text-lg mb-2 tracking-tight"
-                                    />
-                                    <EditableText
-                                        tagName="p"
-                                        initialValue={data.texts[`audioDesc${num}`] || `Descrizione del mood che questa traccia dovrebbe ispirare per lo spot.`}
-                                        onSave={(val) => handleSaveText(`audioDesc${num}`, val)}
-                                        isEditing={isEditing}
-                                        multiline={true}
-                                        className="text-sm text-slate-500"
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-            
+            {/* Sezione Stile Fotografico */}
             <section className="px-4 mb-20">
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Stile Fotografico</h2>
-                    <div className="flex flex-col gap-8">
+                    <div className="space-y-6">
                         {[1, 2, 3, 4, 5].map((num) => (
-                            <div key={num} className="w-full aspect-video bg-slate-200 rounded-[2rem] overflow-hidden flex items-center justify-center shadow-sm border border-slate-100">
+                            <div key={num} className="w-full aspect-[16/9] bg-slate-200 rounded-[2rem] overflow-hidden flex items-center justify-center border border-slate-100 shadow-sm relative">
                                 <MediaUploader
-                                    initialUrl={data.media[`stileFoto${num}`] || ''}
-                                    onUploadSuccess={(url) => handleMediaUpload(`stileFoto${num}`, url)}
+                                    initialUrl={data.media[`stylePhoto${num}`] || ''}
+                                    onUploadSuccess={(url) => handleMediaUpload(`stylePhoto${num}`, url)}
                                     isEditing={isEditing}
-                                    placeholderText={`[Immagine Stile Fotografico ${num}]`}
+                                    placeholderText={`[Immagine Stile ${num}]`}
                                 />
                             </div>
                         ))}
