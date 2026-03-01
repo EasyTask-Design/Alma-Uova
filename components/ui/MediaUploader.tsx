@@ -56,6 +56,7 @@ export default function MediaUploader({
     };
 
     const isVideo = url.match(/\.(mp4|webm|ogg)$/i);
+    const isAudio = url.match(/\.(mp3|wav|m4a|aac)$/i);
 
     const renderMedia = () => {
         if (!url) {
@@ -67,14 +68,12 @@ export default function MediaUploader({
         }
 
         if (isVideo) {
+            if (isAudio) {
             return (
-                <video
+                <audio
                     src={url}
                     controls
-                    className="w-full h-full object-cover rounded-2xl"
-                    autoPlay
-                    muted
-                    loop
+                    className="w-full px-4"
                 />
             );
         }
@@ -108,7 +107,7 @@ export default function MediaUploader({
                 ref={fileInputRef}
                 onChange={handleFileChange}
                 className="hidden"
-                accept="image/*,video/*"
+                accept="image/*,video/*,audio/*"
             />
         </div>
     );

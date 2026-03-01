@@ -343,6 +343,44 @@ function PresentationContent() {
                 </div>
             </section>
 
+            
+            {/* Sezione Proposte Musicali */}
+            <section className="px-4 mb-20">
+                <div className="max-w-3xl mx-auto">
+                    <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Proposte Soundtrack & Jingle</h2>
+                    <div className="space-y-6">
+                        {[1, 2, 3].map(num => (
+                            <div key={num} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col gap-4">
+                                <EditableText
+                                    tagName="h4"
+                                    initialValue={data.texts[`musicTitle${num}`] || `Proposta Audio ${num}`}
+                                    onSave={(val) => handleSaveText(`musicTitle${num}`, val)}
+                                    isEditing={isEditing}
+                                    className="font-bold text-lg"
+                                />
+                                <EditableText
+                                    tagName="p"
+                                    initialValue={data.texts[`musicLink${num}`] || ""}
+                                    onSave={(val) => handleSaveText(`musicLink${num}`, val)}
+                                    isEditing={isEditing}
+                                    placeholder="[Opzionale] Incolla qui un link (Spotify, YouTube, ecc...)"
+                                    className="text-sm text-blue-500 underline"
+                                    multiline={true}
+                                />
+                                <div className="h-24 bg-slate-50 rounded-xl flex items-center justify-center overflow-hidden border border-dashed border-slate-200">
+                                    <MediaUploader
+                                        initialUrl={data.media[`musicFile${num}`] || ''}
+                                        onUploadSuccess={(url) => handleMediaUpload(`musicFile${num}`, url)}
+                                        isEditing={isEditing}
+                                        placeholderText="[Carica file audio MP3/WAV]"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             <section className="px-4 mb-20 bg-slate-900 py-16 text-white overflow-hidden">
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter amber-accent">Tecnologia & Tempi</h2>
