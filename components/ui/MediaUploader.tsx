@@ -48,15 +48,14 @@ export default function MediaUploader({
             alert('Failed to upload file.');
         } finally {
             setIsUploading(false);
-            // Reset input so the same file can be uploaded again if needed
             if (fileInputRef.current) {
                 fileInputRef.current.value = '';
             }
         }
     };
 
-    const isVideo = url.match(/\.(mp4|webm|ogg)$/i);
-    const isAudio = url.match(/\.(mp3|wav|m4a|aac)$/i);
+    const isVideo = url ? url.match(/\.(mp4|webm|ogg)$/i) : false;
+    const isAudio = url ? url.match(/\.(mp3|wav|m4a|aac)$/i) : false;
 
     const renderMedia = () => {
         if (!url) {
@@ -68,7 +67,19 @@ export default function MediaUploader({
         }
 
         if (isVideo) {
-            if (isAudio) {
+            return (
+                <video
+                    src={url}
+                    controls
+                    className="w-full h-full object-cover rounded-2xl"
+                    autoPlay
+                    muted
+                    loop
+                />
+            );
+        }
+
+        if (isAudio) {
             return (
                 <audio
                     src={url}
