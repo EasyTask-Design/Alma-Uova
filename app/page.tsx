@@ -199,126 +199,55 @@ function PresentationContent() {
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Storyboard Spot 30"</h2>
 
-                    <div className="space-y-8">
-                        {/* Step 1 */}
-                        <div className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
-                            <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                                <MediaUploader
-                                    initialUrl={data.media.step1}
-                                    onUploadSuccess={(url) => handleMediaUpload('step1', url)}
-                                    isEditing={isEditing}
-                                    placeholderText="[Immagine Macro Uovo]"
-                                />
-                            </div>
-                            <div className="w-full md:w-2/3 pr-4">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-amber-500 font-black">0-5 SEC</span>
-                                    <span className="text-[10px] font-bold bg-slate-100 px-2 py-0.5 rounded uppercase">Location: Azienda</span>
+                    <div className="space-y-6">
+                        {[
+                            { time: '00-02 SEC', label: 'Fermo immagine', desc: "Uovo Alma su tavolo pulito. Logo in vista sul guscio.", voice: "L'uovo." },
+                            { time: '02-04 SEC', label: 'Scatto', desc: "Un ragazzo mette le cuffie e inizia a correre sul Lago di Garda.", voice: "Forza... intatta." },
+                            { time: '04-06 SEC', label: 'Dettaglio', desc: "Ciclista suda in salita / Operaio controlla l'uovo sotto LED.", voice: "Pronta... a farsi gusto." },
+                            { time: '06-08 SEC', label: 'Emozione/Azione', desc: "Scatola ALMA tra bimbo e papà / Tuffo in piscina.", voice: "Pronta... a darti lo scatto." },
+                            { time: '08-10 SEC', label: 'Cucina', desc: "L'uovo viene rotto e cade al centro della padella rovente.", voice: "13 vitamine." },
+                            { time: '10-12 SEC', label: 'Dinamismo', desc: "Frusta che sbatte / Uovo che bolle in pentola trasparente.", voice: "Ricchezza... naturale." },
+                            { time: '12-15 SEC', label: 'Match-Cut', desc: "Planetaria gira / Ruota bici corre / Palestrato mangia.", voice: "Oltre 12 grammi... di proteine nobili." },
+                            { time: '15-17 SEC', label: 'Ritmo', desc: "Mamma nuotatrice mette occhialini / Tavolo imbandito ALMA.", voice: "Il cuore... di mille sapori." },
+                            { time: '17-20 SEC', label: 'Food Porn', desc: "Rotazione rapida piatti (pasta, omelette, dolci, crema).", voice: "Dalla sfoglia fatta in casa... alla crema pasticcera." },
+                            { time: '20-22 SEC', label: 'Dettaglio finale', desc: "Uovo sodo aperto con sale, olio e cucchiaio.", voice: "Per arrivare più lontano." },
+                            { time: '22-24 SEC', label: 'Contagio', desc: "Sorriso radioso tra madre e figlio a tavola a colazione.", voice: "Serve un equilibrio che dura." },
+                            { time: '24-26 SEC', label: 'Industria', desc: "Nastro trasportatore veloce e controllo qualità finale.", voice: "Selezionato con rigore... uovo dopo uovo." },
+                            { time: '26-28 SEC', label: 'Brand', desc: "Tutte le confezioni ALMA schierate su un tavolo di legno.", voice: "Corriamo al tuo fianco... ogni giorno." },
+                            { time: '28-30 SEC', label: 'Packshot', desc: "Logo centrale. Scritta: ECCELLENZA VENETA. ENERGIA QUOTIDIANA.", voice: "Alma Uova. Eccellenza Veneta... Energia Quotidiana." }
+                        ].map((step, idx) => (
+                            <div key={idx} className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
+                                <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
+                                    <MediaUploader
+                                        initialUrl={data.media[`storyMedia${idx}`] || ''}
+                                        onUploadSuccess={(url) => handleMediaUpload(`storyMedia${idx}`, url)}
+                                        isEditing={isEditing}
+                                        placeholderText={`[Scena ${idx + 1} - ${step.label}]`}
+                                    />
                                 </div>
-                                <p className="text-sm font-bold mb-1 italic">"Ogni mattina, la nostra terra ci dà il meglio."</p>
-                                <p className="text-xs text-slate-500">Dettaglio macro di un uovo Alma. Una mano esperta di un professionista lo seleziona con cura millimetrica tra gli altri.</p>
-                            </div>
-                        </div>
-
-                        {/* Step 2 */}
-                        <div className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
-                            <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                                <MediaUploader
-                                    initialUrl={data.media.step2}
-                                    onUploadSuccess={(url) => handleMediaUpload('step2', url)}
-                                    isEditing={isEditing}
-                                    placeholderText="[Dettaglio Mani & Lavoro]"
-                                />
-                            </div>
-                            <div className="w-full md:w-2/3 pr-4">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-amber-500 font-black">5-10 SEC</span>
-                                    <span className="text-[10px] font-bold bg-slate-100 px-2 py-0.5 rounded uppercase">Location: Packaging</span>
+                                <div className="w-full md:w-2/3 pr-4">
+                                    <div className="flex justify-between items-center mb-2">
+                                        <span className="text-amber-500 font-black">{step.time}</span>
+                                        <span className="text-[10px] font-bold bg-slate-100 px-2 py-0.5 rounded uppercase">{step.label}</span>
+                                    </div>
+                                    <EditableText
+                                        tagName="p"
+                                        initialValue={data.texts[`storyVoice${idx}`] || `"${step.voice}"`}
+                                        onSave={(val) => handleSaveText(`storyVoice${idx}`, val)}
+                                        isEditing={isEditing}
+                                        className="text-sm font-bold mb-1 italic"
+                                    />
+                                    <EditableText
+                                        tagName="p"
+                                        initialValue={data.texts[`storyDesc${idx}`] || step.desc}
+                                        onSave={(val) => handleSaveText(`storyDesc${idx}`, val)}
+                                        isEditing={isEditing}
+                                        className="text-xs text-slate-500"
+                                        multiline={true}
+                                    />
                                 </div>
-                                <p className="text-sm font-bold mb-1 italic">"Un'attenzione che è passione pura, di chi questo mestiere lo vive."</p>
-                                <p className="text-xs text-slate-500">Inquadratura delle mani di un professionista che controlla le confezioni. Ripresa di tutte le tipologie di packaging schierate.</p>
                             </div>
-                        </div>
-
-                        {/* Step 3 */}
-                        <div className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
-                            <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                                <MediaUploader
-                                    initialUrl={data.media.step3}
-                                    onUploadSuccess={(url) => handleMediaUpload('step3', url)}
-                                    isEditing={isEditing}
-                                    placeholderText="[Sport & Energia]"
-                                />
-                            </div>
-                            <div className="w-full md:w-2/3 pr-4">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-amber-500 font-black">10-15 SEC</span>
-                                    <span className="text-[10px] font-bold bg-slate-100 px-2 py-0.5 rounded uppercase">Location: Cucina Moderna</span>
-                                </div>
-                                <p className="text-sm font-bold mb-1 italic">"Proteine nobili per chi non si ferma mai. Forza naturale."</p>
-                                <p className="text-xs text-slate-500">Un giovane sportivo prepara una colazione proteica. Il tuorlo è di un arancione vivo, perfetto. Movimenti veloci e dinamici.</p>
-                            </div>
-                        </div>
-
-                        {/* Step 4 */}
-                        <div className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
-                            <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                                <MediaUploader
-                                    initialUrl={data.media.step4}
-                                    onUploadSuccess={(url) => handleMediaUpload('step4', url)}
-                                    isEditing={isEditing}
-                                    placeholderText="[Allevatore & Natura]"
-                                />
-                            </div>
-                            <div className="w-full md:w-2/3 pr-4">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-amber-500 font-black">15-20 SEC</span>
-                                    <span className="text-[10px] font-bold bg-slate-100 px-2 py-0.5 rounded uppercase">Location: Allevamento</span>
-                                </div>
-                                <p className="text-sm font-bold mb-1 italic">"Rispettiamo i tempi della natura, per portarvi solo il meglio."</p>
-                                <p className="text-xs text-slate-500">Un allevatore raccoglie le uova in una location suggestiva. Atmosfera calda e realistica (Ripresa reale o integrazione AI di alta qualità).</p>
-                            </div>
-                        </div>
-
-                        {/* Step 5 */}
-                        <div className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
-                            <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                                <MediaUploader
-                                    initialUrl={data.media.step5}
-                                    onUploadSuccess={(url) => handleMediaUpload('step5', url)}
-                                    isEditing={isEditing}
-                                    placeholderText="[Preparazione Gourmet]"
-                                />
-                            </div>
-                            <div className="w-full md:w-2/3 pr-4">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-amber-500 font-black">20-25 SEC</span>
-                                    <span className="text-[10px] font-bold bg-slate-100 px-2 py-0.5 rounded uppercase">Location: Studio</span>
-                                </div>
-                                <p className="text-sm font-bold mb-1 italic">"Dall'esperienza alla vostra tavola. Ogni singolo giorno."</p>
-                                <p className="text-xs text-slate-500">Rallenty di un uovo che viene aperto. La consistenza è perfetta. Si vede la gamma completa delle confezioni Alma Uova.</p>
-                            </div>
-                        </div>
-
-                        {/* Step 6 */}
-                        <div className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
-                            <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                                <MediaUploader
-                                    initialUrl={data.media.step6}
-                                    onUploadSuccess={(url) => handleMediaUpload('step6', url)}
-                                    isEditing={isEditing}
-                                    placeholderText="[Logo & Jingle]"
-                                />
-                            </div>
-                            <div className="w-full md:w-2/3 pr-4">
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-amber-500 font-black">25-30 SEC</span>
-                                    <span className="text-[10px] font-bold bg-slate-100 px-2 py-0.5 rounded uppercase">Chiusura</span>
-                                </div>
-                                <p className="text-sm font-bold mb-1 italic">"Alma Uova. L'anima veneta in ogni guscio."</p>
-                                <p className="text-xs text-slate-500">Logo a tutto schermo. Jingle musicale personalizzato creato con sistemi vocali e sonori avanzati.</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
