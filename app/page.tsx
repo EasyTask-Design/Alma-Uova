@@ -104,7 +104,7 @@ function PresentationContent() {
             <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 px-6 py-4">
                 <div className="max-w-3xl mx-auto flex justify-between items-center relative">
                     <span className="font-black text-xl tracking-tighter uppercase italic">
-                        Alma <span className="amber-text">Uova</span>
+                        PRESENTAZIONE <span className="amber-text">OFFERTA</span>
                     </span>
                     <div className="text-[10px] font-bold bg-slate-900 text-white px-3 py-1 rounded-full uppercase tracking-widest">
                         Documento Strategico
@@ -149,48 +149,43 @@ function PresentationContent() {
                 />
             </header>
 
+            
             <section className="px-4 mb-16">
-                <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
-                    {/* Pillar 1 */}
-                    <div className="bg-white p-8 rounded-custom shadow-sm border border-slate-100 text-center">
-                        <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        </div>
-                        <h3 className="font-black uppercase text-sm mb-2 tracking-tighter">L'Uovo Veneto</h3>
-                        <p className="text-xs text-slate-500">Il legame indissolubile con la nostra terra come garanzia di origine e qualità superiore.</p>
-                    </div>
-
-                    {/* Pillar 2 */}
-                    <div className="bg-white p-8 rounded-custom shadow-sm border border-slate-100 text-center">
-                        <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <h3 className="font-black uppercase text-sm mb-2 tracking-tighter">Sport & Proteine</h3>
-                        <p className="text-xs text-slate-500">Un pilastro moderno che attira chi cerca energia naturale per uno stile di vita attivo.</p>
-                    </div>
-
-                    {/* Pillar 3 */}
-                    <div className="bg-white p-8 rounded-custom shadow-sm border border-slate-100 text-center">
-                        <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h3 className="font-black uppercase text-sm mb-2 tracking-tighter">Lavoro & Impegno</h3>
-                        <p className="text-xs text-slate-500">La dedizione di persone esperte che si prendono cura di ogni fase, senza banalità.</p>
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">SU COSA PUNTARE</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {[
+                            'LO SPORT',
+                            'POTENZIALITà',
+                            'LA NUTRIZIONE (PROTEINE)',
+                            'LA SELEZIONE E CURA (LAVORO E IMPEGNO)',
+                            'LA FAMIGLIA',
+                            'IL VENETO'
+                        ].map((item, idx) => (
+                            <div key={idx} className="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 flex items-center justify-center text-center">
+                                <h3 className="font-black uppercase text-sm tracking-tighter amber-text">{item}</h3>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             
             {/* Sezione Competitor Slider */}
+            
+            {/* Sezione Competitor Slider */}
             <section className="px-4 mb-20">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">Analisi Competitor</h2>
-                    <p className="text-center text-slate-500 text-xs mb-10 uppercase tracking-widest">Riferimenti e benchmark del settore</p>
+                    <p className="text-center text-slate-500 text-sm mb-10 max-w-3xl mx-auto">
+                        I migliori concorrenti del settore hanno altri budget ma possiamo comunque estrarre le cose migliori dai loro e vedere come comunicano i Big del settore.<br/><br/>
+                        <strong>Osservazioni:</strong> 30 secondi per una pubblicità sono tanti, trattenere l’attenzione e raccontare una storia che non ci si annoia ad ascoltare sono i nostri due punti fondamentali, così come veicolare il nostro messaggio nel modo giusto. Il ritmo del video è dato dalla Musica e voiceover che con le diverse scene e stacchi trasportano l’osservatore fino alla fine del video.
+                    </p>
                     
                     <div className="flex overflow-x-auto pb-8 gap-6 snap-x scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                         {[1, 2, 3, 4, 5].map((num) => (
-                            <div key={num} className="min-w-[300px] md:min-w-[350px] snap-center bg-white rounded-[2.5rem] border border-slate-100 shadow-sm p-5">
-                                <div className="aspect-[9/16] bg-slate-200 rounded-[2rem] mb-4 overflow-hidden flex items-center justify-center">
+                            <div key={num} className="min-w-[300px] md:min-w-[400px] snap-center bg-white rounded-[2.5rem] border border-slate-100 shadow-sm p-5">
+                                <div className="aspect-video bg-slate-200 rounded-[2rem] mb-4 overflow-hidden flex items-center justify-center">
                                     <MediaUploader
                                         initialUrl={data.media[`compVideo${num}`] || ''}
                                         onUploadSuccess={(url) => handleMediaUpload(`compVideo${num}`, url)}
@@ -343,13 +338,13 @@ function PresentationContent() {
                 </div>
             </section>
             {/* Sezione Music & Sound Design */}
+            
             <section className="px-4 mb-20 bg-slate-50 py-16 rounded-[3rem] border border-slate-100">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">Music & Sound Selection</h2>
-                    <p className="text-center text-slate-500 text-xs mb-10 uppercase tracking-widest font-bold">Proposte sonore per lo spot</p>
                     
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {[1, 2, 3].map((num) => (
+                    <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                        {[1, 2].map((num) => (
                             <div key={num} className="bg-white rounded-[2rem] shadow-sm border border-slate-100 p-6 flex flex-col items-center">
                                 <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-4 text-amber-600">
                                     <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
@@ -370,14 +365,14 @@ function PresentationContent() {
                                         initialUrl={data.media[`musicFile${num}`] || ''}
                                         onUploadSuccess={(url) => handleMediaUpload(`musicFile${num}`, url)}
                                         isEditing={isEditing}
-                                        placeholderText="Carica Audio"
+                                        placeholderText="Carica Audio mp3"
                                     />
                                 </div>
 
                                 <div className="w-full">
                                     <EditableText
                                         tagName="p"
-                                        initialValue={data.texts[`musicLink${num}`] || 'Link esterno (Spotify/YT)'}
+                                        initialValue={data.texts[`musicLink${num}`] || 'Link esterno'}
                                         onSave={(val) => handleSaveText(`musicLink${num}`, val)}
                                         isEditing={isEditing}
                                         className="text-[10px] text-slate-400 text-center break-all"
@@ -468,41 +463,27 @@ function PresentationContent() {
                     </div>
                 </div>
             </section>
-<section className="px-4 mb-20 bg-slate-900 py-16 text-white overflow-hidden">
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter amber-accent">Tecnologia & Tempi</h2>
 
-                    <div className="grid md:grid-cols-2 gap-10">
-                        <div className="space-y-6">
-                            <h3 className="font-bold text-lg flex items-center gap-2">
-                                <span className="w-1.5 h-6 amber-bg rounded-full"></span>
-                                Professional Tools & AI
-                            </h3>
-                            <ul className="text-xs text-slate-400 space-y-4">
-                                <li><strong className="text-white uppercase">Visivo:</strong> Utilizzo di AI generativa per ricreare scenari naturali complessi e ottimizzare il Color Grading per un risultato "food" irresistibile.</li>
-                                <li><strong className="text-white uppercase">Audio & Jingle:</strong> Creazione di una colonna sonora ad-hoc e di un jingle distintivo tramite sistemi di sintesi sonora avanzati.</li>
-                                <li><strong className="text-white uppercase">Voice Over:</strong> Opzione voce originale della titolare per massima autenticità o voce professionale via AI per perfezione tecnica.</li>
-                            </ul>
-                        </div>
-                        <div className="space-y-6">
-                            <h3 className="font-bold text-lg flex items-center gap-2">
-                                <span className="w-1.5 h-6 amber-bg rounded-full"></span>
-                                Timeline di Produzione
-                            </h3>
-                            <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-                                <p className="text-xs font-bold uppercase text-amber-500 mb-2 tracking-widest">Durata: 3 Settimane</p>
-                                <p className="text-sm leading-relaxed text-slate-300">
-                                    <strong>Inizio: Metà Aprile</strong><br />
-                                    <strong>Consegna: Metà Maggio</strong>
-                                </p>
-                                <p className="text-[10px] mt-4 text-slate-500 italic">Prevede due sessioni di ripresa in azienda per catturare l'anima reale del lavoro.</p>
+
+            
+            <section className="px-4 mb-20">
+                <div className="max-w-3xl mx-auto">
+                    <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Stile Fotografico</h2>
+                    <div className="flex flex-col gap-8">
+                        {[1, 2, 3, 4, 5].map((num) => (
+                            <div key={num} className="w-full aspect-video bg-slate-200 rounded-[2rem] overflow-hidden flex items-center justify-center shadow-sm border border-slate-100">
+                                <MediaUploader
+                                    initialUrl={data.media[`stileFoto${num}`] || ''}
+                                    onUploadSuccess={(url) => handleMediaUpload(`stileFoto${num}`, url)}
+                                    isEditing={isEditing}
+                                    placeholderText={`[Immagine Stile Fotografico ${num}]`}
+                                />
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
-
-            <section id="offerta" className="px-4 pb-20">
+<section id="offerta" className="px-4 pb-20">
                 <div className="max-w-xl mx-auto bg-white p-10 rounded-[2.5rem] border-2 border-slate-900 shadow-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 bg-amber-500 text-white text-[10px] font-black px-6 py-2 uppercase tracking-tighter rotate-0">Offerta Finale</div>
                     <h2 className="text-3xl font-black text-center mb-10 italic uppercase tracking-tighter">Investimento Progetto</h2>
