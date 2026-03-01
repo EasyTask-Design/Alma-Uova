@@ -180,7 +180,42 @@ function PresentationContent() {
                 </div>
             </section>
 
+            
+            {/* Sezione Competitor Slider */}
             <section className="px-4 mb-20">
+                <div className="max-w-5xl mx-auto">
+                    <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">Analisi Competitor</h2>
+                    <p className="text-center text-slate-500 text-xs mb-10 uppercase tracking-widest">Riferimenti e benchmark del settore</p>
+                    
+                    <div className="flex overflow-x-auto pb-8 gap-6 snap-x scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                        {[1, 2, 3, 4, 5].map((num) => (
+                            <div key={num} className="min-w-[300px] md:min-w-[350px] snap-center bg-white rounded-[2.5rem] border border-slate-100 shadow-sm p-5">
+                                <div className="aspect-[9/16] bg-slate-200 rounded-[2rem] mb-4 overflow-hidden flex items-center justify-center">
+                                    <MediaUploader
+                                        initialUrl={data.media[`compVideo${num}`] || ''}
+                                        onUploadSuccess={(url) => handleMediaUpload(`compVideo${num}`, url)}
+                                        isEditing={isEditing}
+                                        placeholderText={`[Video Competitor ${num}]`}
+                                    />
+                                </div>
+                                <div className="px-2">
+                                    <EditableText
+                                        tagName="h4"
+                                        initialValue={data.texts[`compTitle${num}`] || `Competitor ${num}`}
+                                        onSave={(val) => handleSaveText(`compTitle${num}`, val)}
+                                        isEditing={isEditing}
+                                        className="font-black uppercase italic text-sm tracking-tight text-center"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="text-center mt-2 md:hidden">
+                        <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Scorri lateralmente →</span>
+                    </div>
+                </div>
+            </section>
+<section className="px-4 mb-20">
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Storyboard Spot 30"</h2>
 
