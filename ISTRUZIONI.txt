@@ -1,0 +1,49 @@
+# ISTRUZIONI PER IL SITO ALMA UOVA
+
+Questo file spiega come avviare il sito in locale per vederlo e modificarlo in tempo reale.
+
+--- REQUISITI ---
+- Devi avere installato Node.js (che include npm). Puoi scaricarlo da https://nodejs.org/
+
+--- 1. INSTALLAZIONE (Da fare solo la prima volta) ---
+La prima volta che apri il progetto in questa cartella, devi installare le dipendenze.
+
+1. Apri un terminale (come PowerShell o CMD) in questa cartella.
+   (Suggerimento: in Esplora File, fai clic con il tasto destro nella cartella e scegli "Apri nel Terminale").
+2. Esegui questo comando:
+   npm install
+
+Questo comando leggerà il file `package.json` e scaricherà tutte le librerie necessarie (quelle che erano nella cartella `node_modules` che non abbiamo copiato).
+
+--- 2. AVVIARE IL SITO IN MODALITÀ SVILUPPO ---
+Ogni volta che vuoi lavorare sul sito, segui questi passaggi:
+
+1. Apri un terminale in questa cartella, come hai fatto prima.
+2. Esegui questo comando:
+   npm run dev
+
+3. Attendi qualche secondo. Il terminale ti mostrerà un messaggio simile a:
+   "ready - started server on 0.0.0.0:3000, url: http://localhost:3000"
+
+4. Apri il tuo browser (Chrome, Firefox, etc.) e vai all'indirizzo:
+   http://localhost:3000
+
+Ora vedrai il sito funzionare sul tuo computer.
+
+--- 3. MODIFICARE IL SITO ---
+1. Apri la cartella del progetto con un editor di codice (come Visual Studio Code).
+2. Modifica i file che ti interessano (ad esempio, `app/page.tsx` per la pagina principale).
+3. Salva il file.
+
+Automaticamente, il sito nel browser si aggiornerà da solo per mostrarti le modifiche in tempo reale. Non c'è bisogno di riavviare il comando `npm run dev`.
+
+--- 4. SALVARE LE MODIFICHE SU GITHUB ---
+Una volta che hai finito di fare le modifiche e sei soddisfatto:
+
+1. Apri un altro terminale (o ferma il server di sviluppo con CTRL+C in quello attuale).
+2. Usa i comandi di Git per salvare il tuo lavoro sul repository:
+   git add .
+   git commit -m "Descrivi qui le modifiche che hai fatto"
+   git push
+
+Questo è tutto!
