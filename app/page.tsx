@@ -165,31 +165,38 @@ function PresentationContent() {
             <section className="px-4 mb-20">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Analisi Competitor</h2>
-                    <div className="flex overflow-x-auto pb-8 gap-6 snap-x scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-                        {[1, 2, 3, 4, 5].map((num) => (
-                            <div key={num} className="min-w-[300px] md:min-w-[400px] snap-center bg-white rounded-[2.5rem] border border-slate-100 shadow-sm p-5">
-                                <div className="aspect-[9/16] bg-slate-200 rounded-[2rem] mb-4 overflow-hidden flex items-center justify-center">
-                                    <MediaUploader
-                                        initialUrl={data.media[`compVideo${num}`] || ''}
-                                        onUploadSuccess={(url) => handleMediaUpload(`compVideo${num}`, url)}
-                                        isEditing={isEditing}
-                                        placeholderText={`[Video Competitor ${num}]`}
-                                    />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {[
+                            { title: 'AIA Uova', info: 'Una storia di famiglia', videoId: 'KPiQ6K4VNWM' },
+                            { title: 'Coccodì', info: 'ASMR Sound EGGsperience', videoId: 'YwQfE5fV724' },
+                            { title: 'Australian Eggs', info: 'Powered by Eggs', videoId: 'fP6F2XP57xY' },
+                            { title: "Eggland's Best", info: 'Make Gatherings Great', videoId: 'NJo8oeEL7eM' },
+                            { title: 'AIA Uova', info: 'Per ogni occasione speciale', videoId: '-Cdv3vNcjyg' },
+                            { title: 'le Naturelle', info: 'Uovo alla coque', videoId: 'czeq7d3_znw' },
+                            { title: 'le Naturelle', info: 'Passione in ogni gesto', videoId: 'Vwk0svfChbc' },
+                            { title: 'le Naturelle', info: 'Uova buone dal 1950', videoId: 'kvo0ociJdnQ' },
+                            { title: 'Spot Uova Lago', info: '', videoId: 'PX7-GYCXEH8' },
+                            { title: 'Ovito', info: "L'Uovo Fresco a Casa Tua", videoId: 'ay6Q5jWGdok' },
+                        ].map((comp, idx) => (
+                            <div key={idx} className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm p-5">
+                                <div className="aspect-[16/9] bg-slate-200 rounded-[2rem] mb-4 overflow-hidden">
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src={`https://www.youtube.com/embed/${comp.videoId}`}
+                                        title={comp.title}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="w-full h-full"
+                                    ></iframe>
                                 </div>
-                                <div className="px-2">
-                                    <EditableText
-                                        tagName="h4"
-                                        initialValue={data.texts[`compTitle${num}`] || `Competitor ${num}`}
-                                        onSave={(val) => handleSaveText(`compTitle${num}`, val)}
-                                        isEditing={isEditing}
-                                        className="font-black uppercase italic text-sm tracking-tight text-center"
-                                    />
+                                <div className="px-2 text-center">
+                                    <h4 className="font-black uppercase italic text-sm tracking-tight">{comp.title}</h4>
+                                    {comp.info && <p className="text-xs text-slate-500 mt-1">{comp.info}</p>}
                                 </div>
                             </div>
                         ))}
-                    </div>
-                    <div className="text-center mt-2 md:hidden">
-                        <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Scorri lateralmente →</span>
                     </div>
                 </div>
             </section>
@@ -201,20 +208,20 @@ function PresentationContent() {
 
                     <div className="space-y-6">
                         {[
-                            { time: '00-02 SEC', label: 'Fermo immagine', desc: "Uovo Alma su tavolo pulito. Logo in vista sul guscio.", voice: "L'uovo." },
-                            { time: '02-04 SEC', label: 'Scatto', desc: "Un ragazzo mette le cuffie e inizia a correre sul Lago di Garda.", voice: "Forza... intatta." },
-                            { time: '04-06 SEC', label: 'Dettaglio', desc: "Ciclista suda in salita / Operaio controlla l'uovo sotto LED.", voice: "Pronta... a farsi gusto." },
-                            { time: '06-08 SEC', label: 'Emozione/Azione', desc: "Scatola ALMA tra bimbo e papà / Tuffo in piscina.", voice: "Pronta... a darti lo scatto." },
-                            { time: '08-10 SEC', label: 'Cucina', desc: "L'uovo viene rotto e cade al centro della padella rovente.", voice: "13 vitamine." },
-                            { time: '10-12 SEC', label: 'Dinamismo', desc: "Frusta che sbatte / Uovo che bolle in pentola trasparente.", voice: "Ricchezza... naturale." },
-                            { time: '12-15 SEC', label: 'Match-Cut', desc: "Planetaria gira / Ruota bici corre / Palestrato mangia.", voice: "Oltre 12 grammi... di proteine nobili." },
-                            { time: '15-17 SEC', label: 'Ritmo', desc: "Mamma nuotatrice mette occhialini / Tavolo imbandito ALMA.", voice: "Il cuore... di mille sapori." },
-                            { time: '17-20 SEC', label: 'Food Porn', desc: "Rotazione rapida piatti (pasta, omelette, dolci, crema).", voice: "Dalla sfoglia fatta in casa... alla crema pasticcera." },
-                            { time: '20-22 SEC', label: 'Dettaglio finale', desc: "Uovo sodo aperto con sale, olio e cucchiaio.", voice: "Per arrivare più lontano." },
-                            { time: '22-24 SEC', label: 'Contagio', desc: "Sorriso radioso tra madre e figlio a tavola a colazione.", voice: "Serve un equilibrio che dura." },
-                            { time: '24-26 SEC', label: 'Industria', desc: "Nastro trasportatore veloce e controllo qualità finale.", voice: "Selezionato con rigore... uovo dopo uovo." },
-                            { time: '26-28 SEC', label: 'Brand', desc: "Tutte le confezioni ALMA schierate su un tavolo di legno.", voice: "Corriamo al tuo fianco... ogni giorno." },
-                            { time: '28-30 SEC', label: 'Packshot', desc: "Logo centrale. Scritta: ECCELLENZA VENETA. ENERGIA QUOTIDIANA.", voice: "Alma Uova. Eccellenza Veneta... Energia Quotidiana." }
+                            { time: '00-02 SEC', label: 'Fermo immagine', desc: "Uovo, dritto, sul tavolo della cucina di casa./ viene preso dalla mano del papà.", voice: "L'uovo." },
+                            { time: '02-04 SEC', label: 'Scatto', desc: "Un corridore prende fiato e si mette una cuffietta prima di ricominciare a correre.", voice: "Forza... intatta." },
+                            { time: '04-06 SEC', label: 'Dettaglio', desc: "Frusta che sbatte e uovo che bolle. (Stacco netto su nuotatore che rompe la superficie di una piscina con un tuffo)", voice: "Pronta... a farsi gusto." },
+                            { time: '06-08 SEC', label: 'Emozione/Azione', desc: "Un ciclista pedala sulle colline del Valdobbiadene/ zoom out sul panorama veneto.", voice: "Pronta... a darti lo scatto." },
+                            { time: '08-10 SEC', label: 'Cucina', desc: "macchine che trasportano le uova. E si passa all'operaio che inscatola le uova con cura una ad una.", voice: "13 vitamine." },
+                            { time: '10-12 SEC', label: 'Dinamismo', desc: "L'operaio mette l'uovo dentro la confezione sul banco di metallo. si passa alla stessa confezione ma a casa della famiglia. il bambino prende la confezione e la porta dal papà ai fornelli.", voice: "Ricchezza... naturale." },
+                            { time: '12-15 SEC', label: 'Match-Cut', desc: "Il papà sta preparando la colazione, prende un'uovo e lo rompe al centro della padella.", voice: "Oltre 12 grammi... di proteine nobili." },
+                            { time: '15-17 SEC', label: 'Ritmo', desc: "Preparazioni varie fatte in casa con farine e mattarello e uova.", voice: "Il cuore... di mille sapori." },
+                            { time: '17-20 SEC', label: 'Food Porn', desc: "piatti completi (in ristorante e a casa) con rotazione della fotocamera, ogni secondo un piatto diverso (tutti piatti della tradizione veneta).", voice: "Dalla sfoglia fatta in casa... alla crema pasticcera." },
+                            { time: '20-22 SEC', label: 'Dettaglio finale', desc: "Un ragazzo gioca a calcio con gli amici, poi mangia un tramezzino con l'uovo.", voice: "Per arrivare più lontano." },
+                            { time: '22-24 SEC', label: 'Contagio', desc: "Bambino che ride con la bocca sporca, nello sfondo si intravede venezia.", voice: "Serve un equilibrio che dura." },
+                            { time: '24-26 SEC', label: 'Industria', desc: "ritorno alla cura e selezione delle uova da parte degli operatori.", voice: "Selezionato con rigore... uovo dopo uovo." },
+                            { time: '26-28 SEC', label: 'Brand', desc: "Tutte le confezioni delle uova Alma Uova posizionate sul tavolo.", voice: "Corriamo al tuo fianco... ogni giorno." },
+                            { time: '28-30 SEC', label: 'Packshot', desc: "stacco finale con logo centrale e claim dello spot al centro, con panorama veneto sfuocato come sfondo.", voice: "Alma Uova. Eccellenza Veneta... Energia Quotidiana." }
                         ].map((step, idx) => (
                             <div key={idx} className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
                                 <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
@@ -257,55 +264,37 @@ function PresentationContent() {
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">Music & Sound Selection</h2>
                     
-                    <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                        {[1, 2].map((num) => (
-                            <div key={num} className="bg-white rounded-[2rem] shadow-sm border border-slate-100 p-6 flex flex-col items-center">
-                                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-4 text-amber-600">
-                                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                        {[
+                            'Alma Uova-crescendo-2.mp3',
+                            'Alma Uova-classic.mp3',
+                            'Alma Uova-rock.mp3',
+                            'Alma Uova-perfetto.mp3',
+                            'Alma Uova-groovey.mp3',
+                            'Alma Uova-groove.mp3',
+                            'Alma Uova-funky.mp3',
+                            'Alma Uova-crescendo-3.mp3',
+                            "L'uovo-Crescendo.mp3",
+                            "L'uovo-Beatmp3.mp3",
+                            'Alma Uova-Rock-2.mp3',
+                        ].map((track, idx) => (
+                            <div key={idx} className="bg-white rounded-[2rem] shadow-sm border border-slate-100 p-6 flex flex-col items-center">
+                                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-3 text-amber-600">
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 3v11.138A3.001 3.001 0 005 13H4a2 2 0 100 4h1a3 3 0 003-3V5.784l8-1.6V16.138A3.001 3.001 0 0015 15h-1a2 2 0 100 4h1a3 3 0 003-3V3z" />
                                     </svg>
                                 </div>
-                                
-                                <EditableText
-                                    tagName="h4"
-                                    initialValue={data.texts[`musicTitle${num}`] || `Traccia ${num}`}
-                                    onSave={(val) => handleSaveText(`musicTitle${num}`, val)}
-                                    isEditing={isEditing}
-                                    className="font-black uppercase text-sm mb-4 tracking-tight"
-                                />
-
-                                <div className="w-full h-12 bg-slate-50 rounded-xl flex items-center justify-center mb-4 border border-slate-100">
-                                    <MediaUploader
-                                        initialUrl={data.media[`musicFile${num}`] || ''}
-                                        onUploadSuccess={(url) => handleMediaUpload(`musicFile${num}`, url)}
-                                        isEditing={isEditing}
-                                        placeholderText="Carica File MP3"
-                                    />
-                                </div>
+                                <h4 className="font-black uppercase text-xs mb-3 tracking-tight text-center">{track.replace('.mp3', '')}</h4>
+                                <audio controls className="w-full">
+                                    <source src={`/music/${track}`} type="audio/mpeg" />
+                                </audio>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Sezione Stile Fotografico */}
-            <section className="px-4 mb-20">
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-2xl font-black mb-10 italic uppercase tracking-tighter text-center">Stile Fotografico</h2>
-                    <div className="space-y-6">
-                        {[1, 2, 3, 4, 5].map((num) => (
-                            <div key={num} className="w-full aspect-[16/9] bg-slate-200 rounded-[2rem] overflow-hidden flex items-center justify-center border border-slate-100 shadow-sm relative">
-                                <MediaUploader
-                                    initialUrl={data.media[`stylePhoto${num}`] || ''}
-                                    onUploadSuccess={(url) => handleMediaUpload(`stylePhoto${num}`, url)}
-                                    isEditing={isEditing}
-                                    placeholderText={`[Immagine Stile ${num}]`}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 <section id="offerta" className="px-4 pb-20">
                 <div className="max-w-xl mx-auto bg-white p-10 rounded-[2.5rem] border-2 border-slate-900 shadow-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 bg-amber-500 text-white text-[10px] font-black px-6 py-2 uppercase tracking-tighter rotate-0">Offerta Finale</div>
