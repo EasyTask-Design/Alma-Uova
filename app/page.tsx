@@ -208,20 +208,20 @@ function PresentationContent() {
 
                     <div className="space-y-6">
                         {[
-                            { time: '00-02 SEC', label: 'Fermo immagine', desc: "Uovo, dritto, sul tavolo della cucina di casa./ viene preso dalla mano del papà.", voice: "L'uovo." },
-                            { time: '02-04 SEC', label: 'Scatto', desc: "Un corridore prende fiato e si mette una cuffietta prima di ricominciare a correre.", voice: "Forza... intatta." },
-                            { time: '04-06 SEC', label: 'Dettaglio', desc: "Frusta che sbatte e uovo che bolle. (Stacco netto su nuotatore che rompe la superficie di una piscina con un tuffo)", voice: "Pronta... a farsi gusto." },
-                            { time: '06-08 SEC', label: 'Emozione/Azione', desc: "Un ciclista pedala sulle colline del Valdobbiadene/ zoom out sul panorama veneto.", voice: "Pronta... a darti lo scatto." },
-                            { time: '08-10 SEC', label: 'Cucina', desc: "macchine che trasportano le uova. E si passa all'operaio che inscatola le uova con cura una ad una.", voice: "13 vitamine." },
-                            { time: '10-12 SEC', label: 'Dinamismo', desc: "L'operaio mette l'uovo dentro la confezione sul banco di metallo. si passa alla stessa confezione ma a casa della famiglia. il bambino prende la confezione e la porta dal papà ai fornelli.", voice: "Ricchezza... naturale." },
-                            { time: '12-15 SEC', label: 'Match-Cut', desc: "Il papà sta preparando la colazione, prende un'uovo e lo rompe al centro della padella.", voice: "Oltre 12 grammi... di proteine nobili." },
-                            { time: '15-17 SEC', label: 'Ritmo', desc: "Preparazioni varie fatte in casa con farine e mattarello e uova.", voice: "Il cuore... di mille sapori." },
-                            { time: '17-20 SEC', label: 'Food Porn', desc: "piatti completi (in ristorante e a casa) con rotazione della fotocamera, ogni secondo un piatto diverso (tutti piatti della tradizione veneta).", voice: "Dalla sfoglia fatta in casa... alla crema pasticcera." },
-                            { time: '20-22 SEC', label: 'Dettaglio finale', desc: "Un ragazzo gioca a calcio con gli amici, poi mangia un tramezzino con l'uovo.", voice: "Per arrivare più lontano." },
-                            { time: '22-24 SEC', label: 'Contagio', desc: "Bambino che ride con la bocca sporca, nello sfondo si intravede venezia.", voice: "Serve un equilibrio che dura." },
-                            { time: '24-26 SEC', label: 'Industria', desc: "ritorno alla cura e selezione delle uova da parte degli operatori.", voice: "Selezionato con rigore... uovo dopo uovo." },
-                            { time: '26-28 SEC', label: 'Brand', desc: "Tutte le confezioni delle uova Alma Uova posizionate sul tavolo.", voice: "Corriamo al tuo fianco... ogni giorno." },
-                            { time: '28-30 SEC', label: 'Packshot', desc: "stacco finale con logo centrale e claim dello spot al centro, con panorama veneto sfuocato come sfondo.", voice: "Alma Uova. Eccellenza Veneta... Energia Quotidiana." }
+                            { time: '00-02 SEC', label: 'SCENA 1', desc: "Uovo, dritto, sul tavolo della cucina di casa./ viene preso dalla mano del papà.", voice: "L'uovo." },
+                            { time: '02-04 SEC', label: 'SCENA 2', desc: "Un corridore prende fiato e si mette una cuffietta prima di ricominciare a correre.", voice: "Forza... intatta." },
+                            { time: '04-06 SEC', label: 'SCENA 3', desc: "Frusta che sbatte e uovo che bolle. (Stacco netto su nuotatore che rompe la superficie di una piscina con un tuffo)", voice: "Pronta... a farsi gusto." },
+                            { time: '06-08 SEC', label: 'SCENA 4', desc: "Un ciclista pedala sulle colline del Valdobbiadene/ zoom out sul panorama veneto.", voice: "Pronta... a darti lo scatto." },
+                            { time: '08-10 SEC', label: 'SCENA 5', desc: "macchine che trasportano le uova. E si passa all'operaio che inscatola le uova con cura una ad una.", voice: "13 vitamine." },
+                            { time: '10-12 SEC', label: 'SCENA 6', desc: "L'operaio mette l'uovo dentro la confezione sul banco di metallo. si passa alla stessa confezione ma a casa della famiglia. il bambino prende la confezione e la porta dal papà ai fornelli.", voice: "Ricchezza... naturale." },
+                            { time: '12-15 SEC', label: 'SCENA 7', desc: "Il papà sta preparando la colazione, prende un'uovo e lo rompe al centro della padella.", voice: "Oltre 12 grammi... di proteine nobili." },
+                            { time: '15-17 SEC', label: 'SCENA 8', desc: "Preparazioni varie fatte in casa con farine e mattarello e uova.", voice: "Il cuore... di mille sapori." },
+                            { time: '17-20 SEC', label: 'SCENA 9', desc: "piatti completi (in ristorante e a casa) con rotazione della fotocamera, ogni secondo un piatto diverso (tutti piatti della tradizione veneta).", voice: "Dalla sfoglia fatta in casa... alla crema pasticcera." },
+                            { time: '20-22 SEC', label: 'SCENA 10', desc: "Un ragazzo gioca a calcio con gli amici, poi mangia un tramezzino con l'uovo.", voice: "Per arrivare più lontano." },
+                            { time: '22-24 SEC', label: 'SCENA 11', desc: "Bambino che ride con la bocca sporca, nello sfondo si intravede venezia.", voice: "Serve un equilibrio che dura." },
+                            { time: '24-26 SEC', label: 'SCENA 12', desc: "ritorno alla cura e selezione delle uova da parte degli operatori.", voice: "Selezionato con rigore... uovo dopo uovo." },
+                            { time: '26-28 SEC', label: 'SCENA 13', desc: "Tutte le confezioni delle uova Alma Uova posizionate sul tavolo.", voice: "Corriamo al tuo fianco... ogni giorno." },
+                            { time: '28-30 SEC', label: 'SCENA 14', desc: "stacco finale con logo centrale e claim dello spot al centro, con panorama veneto sfuocato come sfondo.", voice: "Alma Uova. Eccellenza Veneta... Energia Quotidiana." }
                         ].map((step, idx) => (
                             <div key={idx} className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
                                 <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
@@ -274,6 +274,8 @@ function PresentationContent() {
                             'Alma Uova-groove.mp3',
                             'Alma Uova-funky.mp3',
                             'Alma Uova-crescendo-3.mp3',
+                            "L'uovo-Crescendo.mp3",
+                            "L'uovo-Beatmp3.mp3",
                             "L'uovo-Crescendo.mp3",
                             "L'uovo-Beatmp3.mp3",
                             'Alma Uova-Rock-2.mp3',
