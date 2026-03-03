@@ -22,6 +22,23 @@ interface AppData {
     };
 }
 
+const sceneImages = [
+    '1. Un_uovo_al_centro_della_immag.png',
+    '2. Corridore-3.png',
+    '3 Frusta.png',
+    '4. ciclista.png',
+    '5. 12 Vitamine.png',
+    '6.2 Un_bambino_in_cucina.png',
+    '7. Dodici Vitamine con padre e figlio.png',
+    '8. Preparazione in cucina.png',
+    '9. Uova alla bassanese.png',
+    '10. morso al paninopng.png',
+    '11. Primo_piano_di_un_bambino_veneto_che_ride.png',
+    '12. inscatolamento.png',
+    '13. Confezioni su tavolo.png',
+    '14. Logo e claim.png'
+];
+
 function PresentationContent() {
     const [data, setData] = useState<AppData | null>(null);
     const [isEditing, setIsEditing] = useState(false);
@@ -266,30 +283,29 @@ function PresentationContent() {
                     
                     <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                         {[
-                            'Alma Uova-crescendo-2.mp3',
-                            'Alma Uova-classic.mp3',
-                            'Alma Uova-rock.mp3',
-                            'Alma Uova-perfetto.mp3',
-                            'Alma Uova-groovey.mp3',
-                            'Alma Uova-groove.mp3',
-                            'Alma Uova-funky.mp3',
-                            'Alma Uova-crescendo-3.mp3',
-                            "L'uovo-Crescendo.mp3",
-                            "L'uovo-Beatmp3.mp3",
-                            "L'uovo-Crescendo.mp3",
-                            "L'uovo-Beatmp3.mp3",
-                            'Alma Uova-Rock-2.mp3',
-                        ].map((track, idx) => (
+        { file: 'Alma Uova-Rock-2.mp3', title: 'ROCK' },
+        { file: 'Alma Uova-groovey.mp3', title: 'GROOVE' },
+        { file: 'Alma Uova-crescendo-2.mp3', title: 'CRESCENDO' },
+        { file: 'Alma Uova-crescendo-3.mp3', title: 'CRESCENDO 2' },
+        { custom: true, title: 'BRANO CUSTOM' },
+    ].map((item, idx) => (
                             <div key={idx} className="bg-white rounded-[2rem] shadow-sm border border-slate-100 p-6 flex flex-col items-center">
                                 <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-3 text-amber-600">
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 3v11.138A3.001 3.001 0 005 13H4a2 2 0 100 4h1a3 3 0 003-3V5.784l8-1.6V16.138A3.001 3.001 0 0015 15h-1a2 2 0 100 4h1a3 3 0 003-3V3z" />
                                     </svg>
                                 </div>
-                                <h4 className="font-black uppercase text-xs mb-3 tracking-tight text-center">{track.replace('.mp3', '')}</h4>
-                                <audio controls className="w-full">
-                                    <source src={`/music/${track}`} type="audio/mpeg" />
-                                </audio>
+                                <h4 className="font-black uppercase text-xs mb-3 tracking-tight text-center">{item.title}</h4>
+                                {item.custom ? (
+                                    <div className="text-center text-slate-500 text-xs space-y-1">
+                                        <p><strong>Creiamo una canzone ad hoc</strong></p>
+                                        <p className="text-[10px]">Con oppure senza voce cantata. Possiamo usare un'attrice/attore per il parlato professionale.</p>
+                                    </div>
+                                ) : (
+                                    <audio controls className="w-full">
+                                        <source src={`/music/${item.file}`} type="audio/mpeg" />
+                                    </audio>
+                                )}
                             </div>
                         ))}
                     </div>
