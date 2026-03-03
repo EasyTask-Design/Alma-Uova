@@ -1,113 +1,55 @@
 {
   "texts": {
     "title": "ALMA UOVA<br/><span class=\"text-3xl md:text-5xl text-slate-800\">Eccellenza Veneta, Energia Quotidiana</span>",
-    "subtitle": "Ho iniziato facendo ricerca, raccogliendo tutti gli spot commerciali per le uova e simili, italiani e stranieri."
+    "subtitle": "Ho iniziato facendo ricerca, raccogliendo tutti gli spot commerciali per le uova e simili, italiani e stranieri. I migliori concorrenti del settore hanno altri budget ma possiamo comunque estrarre le cose migliori dai loro e vedere come comunicano i Big del settore.",
+    "storyVoice0": "\"L'uovo.\"",
+    "storyDesc0": "Uovo Alma fisso su tavolo pulito. Macro fotografica di un uovo ALMA centrato su un tavolo di legno chiaro. Luce zenitale pulita.",
+    "storyVoice1": "\"Forza... intatta.\"",
+    "storyDesc1": "Ragazzo con cuffie corre lungo il lago. Dettaglio di un ragazzo che indossa cuffie sport; sullo sfondo le acque del Lago di Garda.",
+    "storyVoice2": "\"Pronta... a farsi gusto.\"",
+    "storyDesc2": "Ciclista in salita e operaio con luce LED. Primo piano di un ciclista che suda salendo le colline di Valdobbiadene, vigneti sfocati dietro.",
+    "storyVoice3": "\"Pronta... a darti lo scatto.\"",
+    "storyDesc3": "Bimbo e papà in cucina, poi tuffo in piscina. Il bambino appoggia con fierezza la scatola ALMA sul tavolo guardando il papà.",
+    "storyVoice4": "\"13 vitamine.\"",
+    "storyDesc4": "Uovo rotto che cade nella padella rovente. Mani che rompono un uovo sopra una padella d'acciaio; il guscio si separa nettamente.",
+    "storyVoice5": "\"Ricchezza... naturale.\"",
+    "storyDesc5": "Frusta che sbatte e uovo che bolle. Macro di una frusta d'acciaio che sbatte vorticosamente uova giallo vivo in una ciotola.",
+    "storyVoice6": "\"Oltre 12 grammi... di proteine nobili.\"",
+    "storyDesc6": "Match-Cut: Planetaria, ruota bici e palestrato. La frusta della planetaria gira velocissima, creando un vortice di impasto giallo.",
+    "storyVoice7": "\"Il cuore... di mille sapori.\"",
+    "storyDesc7": "Ritmo e Casa: Mamma in piscina e tavola imbandita. La mamma esce dall'acqua azzurra, si sistema gli occhialini e si ributta con energia.",
+    "storyVoice8": "\"Dalla sfoglia fatta in casa... alla crema pasticcera.\"",
+    "storyDesc8": "Food Porn: Rotazione rapida dei piatti finiti. Montaggio a raffica: un piatto di bigoli all'uovo che ruota velocemente.",
+    "storyVoice9": "\"Per arrivare più lontano.\"",
+    "storyDesc9": "Dettaglio: L'uovo sodo aperto con condimento. Primo piano di un uovo sodo tagliato a metà che mostra un tuorlo cremoso e arancione.",
+    "storyVoice10": "\"Serve un equilibrio che dura.\"",
+    "storyDesc10": "Contagio: Sorriso radioso tra madre e figlio a tavola. Primo piano di un bambino veneto che ride di gusto a tavola. Luce naturale calda.",
+    "storyVoice11": "\"Selezionato con rigore... uovo dopo uovo.\"",
+    "storyDesc11": "Controllo: Nastro trasportatore e analisi dell'operaio. Inquadratura tecnica radente del nastro trasportatore in acciaio con uova che scorrono veloci.",
+    "storyVoice12": "\"Corriamo al tuo fianco... ogni giorno.\"",
+    "storyDesc12": "Fiducia: Tutte le confezioni ALMA schierate sul tavolo. Inquadratura media di tutte le varianti di confezioni ALMA disposte con ordine su un tavolo di legno.",
+    "storyVoice13": "\"Alma Uova. Eccellenza Veneta... Energia Quotidiana.\"",
+    "storyDesc13": "Packshot: Logo e claim finale su sfondo veneto. Grafica pulita con il logo ALMA che si posiziona al centro dello schermo."
   },
   "media": {
-    "logo": "/uploads/Logo-alma-transp-167x124.png",
-    "step1": "/uploads/1772192103265_Powered by Eggs - Australian Eggs (1080p, h264).mp4",
-    "step2": "/uploads/CORNETTO-ALGIDA-UN-ESTATE-DA-SCARTARE-.mp4",
-    "step3": "/uploads/Coccodi-ASMR-Sound-EGGsperience-E-fresco.mp4",
-    "step4": "/uploads/AIA Uova - Una storia di famiglia - Con i Maestri Iginio e Debora Massari - AIAFood (1080p, h264).mp4",
-    "step5": "/uploads/Ovito-L-Uovo-Fresco-a-Casa-Tua.mp4",
-    "step6": "/uploads/Spot TV le Naturelle 2014 - Uovo alla coque - le Naturelle.mp4",
-    "step7": "/uploads/Spot Uova Fantolino - FERRAFILM.mp4",
-    "step8": "/uploads/le Naturelle, uova buone dal 1950 - le Naturelle (1080p, h264).mp4",
-    "step9": "/uploads/Perché c'è un uovo AIA per ogni occasione speciale - AIAFood (1080p, h264).mp4",
-    "step10": "/uploads/Powered by Eggs - Australian Eggs.mp4",
-    "step11": "/uploads/Eggland's Best Commercial ITA (2025).mp4",
-    "step12": "/uploads/Eggland-Best-Commercial-2025.mp4",
-    "step13": "/uploads/SPOT-UOVA-LAGO.mp4",
-    "step14": "/uploads/Uova-le-Naturelle-passione-in-ogni-gesto.mp4"
-  },
-  "styleExamples": [
-    "/uploads/Uova cartone.png",
-    "/uploads/Uova cartone-2.png"
-  ],
-  "timeline": [
-    {
-      "time": "00-02s",
-      "title": "INTRO",
-      "description": "Uovo Alma fisso su tavolo pulito. Macro fotografica di un uovo ALMA centrato su un tavolo di legno chiaro. Luce zenitale pulita.",
-      "image": "/uploads/alma_uova_00-02s_intro.png"
-    },
-    {
-      "time": "02-04s",
-      "title": "CORSA",
-      "description": "Ragazzo con cuffie corre lungo il lago. Dettaglio di un ragazzo che indossa cuffie sport; sullo sfondo le acque del Lago di Garda.",
-      "image": "/uploads/alma_uova_02-04s_corsa.png"
-    },
-    {
-      "time": "04-06s",
-      "title": "SFORZO/RIGORE",
-      "description": "Ciclista in salita e operaio con luce LED. Primo piano di un ciclista che suda salendo le colline di Valdobbiadene, vigneti sfocati dietro.",
-      "image": "/uploads/alma_uova_04-06s_sforzo.png"
-    },
-    {
-      "time": "06-08s",
-      "title": "SCATTO",
-      "description": "Bimbo e papà in cucina, poi tuffo in piscina. Il bambino appoggia con fierezza la scatola ALMA sul tavolo guardando il papà.",
-      "image": "/uploads/alma_uova_06-08s_scatto.png"
-    },
-    {
-      "time": "08-10s",
-      "title": "CUCINA",
-      "description": "Uovo rotto che cade nella padella rovente. Mani che rompono un uovo sopra una padella d'acciaio; il guscio si separa nettamente.",
-      "image": "/uploads/alma_uova_08-10s_cucina.png"
-    },
-    {
-      "time": "10-12s",
-      "title": "DINAMISMO",
-      "description": "Frusta che sbatte e uovo che bolle. Macro di una frusta d'acciaio che sbatte vorticosamente uova giallo vivo in una ciotola.",
-      "image": "/uploads/alma_uova_10-12s_dinamismo.png"
-    },
-    {
-      "time": "12-15s",
-      "title": "MATCH-CUT",
-      "description": "Planetaria, ruota bici e palestrato. La frusta della planetaria gira velocissima, creando un vortice di impasto giallo.",
-      "image": "/uploads/alma_uova_12-15s_matchcut.png"
-    },
-    {
-      "time": "15-17s",
-      "title": "RITMO E CASA",
-      "description": "Mamma in piscina e tavola imbandita. La mamma esce dall'acqua azzurra, si sistema gli occhialini e si ributta con energia.",
-      "image": "/uploads/alma_uova_15-17s_ritmo.png"
-    },
-    {
-      "time": "17-20s",
-      "title": "FOOD PORN",
-      "description": "Rotazione rapida dei piatti finiti. Montaggio a raffica: un piatto di bigoli all'uovo che ruota velocemente sotto una luce calda.",
-      "image": "/uploads/alma_uova_17-20s_foodporn.png"
-    },
-    {
-      "time": "20-22s",
-      "title": "DETTAGLIO",
-      "description": "L'uovo sodo aperto con condimento. Primo piano di un uovo sodo tagliato a metà che mostra un tuorlo cremoso e arancione.",
-      "image": "/uploads/alma_uova_20-22s_dettaglio.png"
-    },
-    {
-      "time": "22-24s",
-      "title": "CONTAGIO",
-      "description": "Sorriso radioso tra madre e figlio a tavola. Primo piano di un bambino veneto che ride di gusto a tavola. Luce naturale calda.",
-      "image": "/uploads/alma_uova_22-24s_contagio.png"
-    },
-    {
-      "time": "24-26s",
-      "title": "CONTROLLO",
-      "description": "Nastro trasportatore e analisi dell'operaio. Inquadratura tecnica radente del nastro trasportatore in acciaio con uova che scorrono veloci.",
-      "image": "/uploads/alma_uova_24-26s_controllo.png"
-    },
-    {
-      "time": "26-28s",
-      "title": "FIDUCIA",
-      "description": "Tutte le confezioni ALMA schierate sul tavolo. Inquadratura media di tutte le varianti di confezioni ALMA disposte con ordine su un tavolo di legno.",
-      "image": "/uploads/alma_uova_26-28s_fiducia.png"
-    },
-    {
-      "time": "28-30s",
-      "title": "PACKSHOT",
-      "description": "Logo e claim finale su sfondo veneto. Grafica pulita con il logo ALMA che si posiziona al centro dello schermo. Apparea la scritta 'ECCELLENZA VENETA. ENERGIA QUOTIDIANA.'",
-      "image": "/uploads/alma_uova_28-30s_packshot.png"
-    }
-  ]
+    "storyMedia0": "/uploads/alma_uova_00-02s_intro.png",
+    "storyMedia1": "/uploads/alma_uova_02-04s_corsa.png",
+    "storyMedia2": "/uploads/alma_uova_04-06s_sforzo.png",
+    "storyMedia3": "/uploads/alma_uova_06-08s_scatto.png",
+    "storyMedia4": "/uploads/alma_uova_08-10s_cucina.png",
+    "storyMedia5": "/uploads/alma_uova_10-12s_dinamismo.png",
+    "storyMedia6": "/uploads/alma_uova_12-15s_matchcut.png",
+    "storyMedia7": "/uploads/alma_uova_15-17s_ritmo.png",
+    "storyMedia8": "/uploads/alma_uova_17-20s_foodporn.png",
+    "storyMedia9": "/uploads/alma_uova_20-22s_dettaglio.png",
+    "storyMedia10": "/uploads/alma_uova_22-24s_contagio.png",
+    "storyMedia11": "/uploads/alma_uova_24-26s_controllo.png",
+    "storyMedia12": "/uploads/alma_uova_26-28s_fiducia.png",
+    "storyMedia13": "/uploads/alma_uova_28-30s_packshot.png",
+    "compVideo1": "/uploads/1772192103265_Powered by Eggs - Australian Eggs (1080p, h264).mp4",
+    "compVideo2": "/uploads/CORNETTO-ALGIDA-UN-ESTATE-DA-SCARTARE-.mp4",
+    "compVideo3": "/uploads/Coccodi-ASMR-Sound-EGGsperience-E-fresco.mp4",
+    "compVideo4": "/uploads/AIA Uova - Una storia di famiglia - Con i Maestri Iginio e Debora Massari - AIAFood (1080p, h264).mp4",
+    "compVideo5": "/uploads/Ovito-L-Uovo-Fresco-a-Casa-Tua.mp4"
+  }
 }
