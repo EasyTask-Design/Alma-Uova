@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -321,20 +321,20 @@ function PresentationContent() {
                     <div className="space-y-5 mb-10 text-sm">
                         <div className="flex justify-between border-b border-slate-100 pb-3 font-medium">
                             <span className="text-slate-500">Strategia, Regia e Comunicazione</span>
-                            <span className="font-bold">700 â‚¬</span>
+                            <span className="font-bold">700 €</span>
                         </div>
                         <div className="flex justify-between border-b border-slate-100 pb-3 font-medium">
                             <span className="text-slate-500">Shooting e Realizzazione Video</span>
-                            <span className="font-bold">1.400 â‚¬</span>
+                            <span className="font-bold">1.400 €</span>
                         </div>
                         <div className="flex justify-between border-b border-slate-100 pb-3 font-medium">
                             <span className="text-slate-500">Post-produzione, Sound Design e Voiceover</span>
-                            <span className="font-bold">1.400 â‚¬</span>
+                            <span className="font-bold">1.400 €</span>
                         </div>
                     </div>
 
                     <div className="text-center bg-slate-50 p-8 rounded-3xl mb-10">
-                        <div className="text-6xl font-black text-slate-900 tracking-tighter">3.500 â‚¬</div>
+                        <div className="text-6xl font-black text-slate-900 tracking-tighter">3.500 €</div>
                         <p className="text-[10px] font-bold text-slate-400 mt-2 uppercase tracking-widest">Prezzo Finito (Escluso IVA)</p>
                     </div>
 
@@ -358,4 +358,3 @@ export default function PresentationPage() {
         </Suspense>
     );
 }
-
