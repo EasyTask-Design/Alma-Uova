@@ -23,12 +23,12 @@ interface AppData {
 }
 
 const sceneImages = [
-    '1. Un_uovo_al_centro_della_immag.png',
+    '1. Un_uovo_al_centro_della_immagine_si_vedono_bene_le_delpmaspu.png',
     '2. Corridore-3.png',
     '3 Frusta.png',
     '4. ciclista.png',
-    '5. 12 Vitamine.png',
-    '6.2 Un_bambino_in_cucina.png',
+    '5. 12 Vitamine 12 proteine padella.png',
+    '6.2 Un_bambino_in cucina.png',
     '7. Dodici Vitamine con padre e figlio.png',
     '8. Preparazione in cucina.png',
     '9. Uova alla bassanese.png',
