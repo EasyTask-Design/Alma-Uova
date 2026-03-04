@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -153,7 +153,7 @@ function PresentationContent() {
 
                 <div className="text-sm md:text-base text-slate-600 font-medium max-w-3xl mx-auto text-left leading-relaxed space-y-4">
     <p>Ho iniziato facendo ricerca, raccogliendo tutti gli spot commerciali per le uova e simili, italiani e stranieri. I migliori concorrenti del settore hanno altri budget ma possiamo comunque estrarre le cose migliori dai loro e vedere come comunicano i Big del settore.</p>
-    <p><strong>Osservazioni:</strong> 30 secondi per una pubblicità sono tanti, trattenere l'attenzione e raccontare una storia che non ci si annoia ad ascoltare sono i nostri due punti fondamentali, così come veicolare il nostro messaggio nel modo giusto. Il ritmo del video è dato dalla Musica e voiceover che con le diverse scene e stacchi trasportano l'osservatore fino alla fine del video.</p>
+    <p><strong>Osservazioni:</strong> 30 secondi per una pubblicitÃ  sono tanti, trattenere l'attenzione e raccontare una storia che non ci si annoia ad ascoltare sono i nostri due punti fondamentali, cosÃ¬ come veicolare il nostro messaggio nel modo giusto. Il ritmo del video Ã¨ dato dalla Musica e voiceover che con le diverse scene e stacchi trasportano l'osservatore fino alla fine del video.</p>
 </div>
             </header>
 
@@ -164,7 +164,7 @@ function PresentationContent() {
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {[
                             'LO SPORT',
-                            'POTENZIALITÀ',
+                            'POTENZIALITÃ€',
                             'LA NUTRIZIONE (PROTEINE)',
                             'LA SELEZIONE E CURA (LAVORO E IMPEGNO)',
                             'LA FAMIGLIA',
@@ -185,7 +185,7 @@ function PresentationContent() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
                             { title: 'AIA Uova', info: 'Una storia di famiglia', videoId: 'KPiQ6K4VNWM' },
-                            { title: 'Coccodì', info: 'ASMR Sound EGGsperience', videoId: 'YwQfE5fV724' },
+                            { title: 'CoccodÃ¬', info: 'ASMR Sound EGGsperience', videoId: 'YwQfE5fV724' },
                             { title: 'Australian Eggs', info: 'Powered by Eggs', videoId: 'fP6F2XP57xY' },
                             { title: "Eggland's Best", info: 'Make Gatherings Great', videoId: 'NJo8oeEL7eM' },
                             { title: 'AIA Uova', info: 'Per ogni occasione speciale', videoId: '-Cdv3vNcjyg' },
@@ -225,16 +225,16 @@ function PresentationContent() {
 
                     <div className="space-y-6">
                         {[
-                            { time: '00-02 SEC', label: 'SCENA 1', desc: "Uovo, dritto, sul tavolo della cucina di casa./ viene preso dalla mano del papà.", voice: "L'uovo." },
+                            { time: '00-02 SEC', label: 'SCENA 1', desc: "Uovo, dritto, sul tavolo della cucina di casa./ viene preso dalla mano del papÃ .", voice: "L'uovo." },
                             { time: '02-04 SEC', label: 'SCENA 2', desc: "Un corridore prende fiato e si mette una cuffietta prima di ricominciare a correre.", voice: "Forza... intatta." },
                             { time: '04-06 SEC', label: 'SCENA 3', desc: "Frusta che sbatte e uovo che bolle. (Stacco netto su nuotatore che rompe la superficie di una piscina con un tuffo)", voice: "Pronta... a farsi gusto." },
                             { time: '06-08 SEC', label: 'SCENA 4', desc: "Un ciclista pedala sulle colline del Valdobbiadene/ zoom out sul panorama veneto.", voice: "Pronta... a darti lo scatto." },
                             { time: '08-10 SEC', label: 'SCENA 5', desc: "macchine che trasportano le uova. E si passa all'operaio che inscatola le uova con cura una ad una.", voice: "13 vitamine." },
-                            { time: '10-12 SEC', label: 'SCENA 6', desc: "L'operaio mette l'uovo dentro la confezione sul banco di metallo. si passa alla stessa confezione ma a casa della famiglia. il bambino prende la confezione e la porta dal papà ai fornelli.", voice: "Ricchezza... naturale." },
-                            { time: '12-15 SEC', label: 'SCENA 7', desc: "Il papà sta preparando la colazione, prende un'uovo e lo rompe al centro della padella.", voice: "Oltre 12 grammi... di proteine nobili." },
+                            { time: '10-12 SEC', label: 'SCENA 6', desc: "L'operaio mette l'uovo dentro la confezione sul banco di metallo. si passa alla stessa confezione ma a casa della famiglia. il bambino prende la confezione e la porta dal papÃ  ai fornelli.", voice: "Ricchezza... naturale." },
+                            { time: '12-15 SEC', label: 'SCENA 7', desc: "Il papÃ  sta preparando la colazione, prende un'uovo e lo rompe al centro della padella.", voice: "Oltre 12 grammi... di proteine nobili." },
                             { time: '15-17 SEC', label: 'SCENA 8', desc: "Preparazioni varie fatte in casa con farine e mattarello e uova.", voice: "Il cuore... di mille sapori." },
                             { time: '17-20 SEC', label: 'SCENA 9', desc: "piatti completi (in ristorante e a casa) con rotazione della fotocamera, ogni secondo un piatto diverso (tutti piatti della tradizione veneta).", voice: "Dalla sfoglia fatta in casa... alla crema pasticcera." },
-                            { time: '20-22 SEC', label: 'SCENA 10', desc: "Un ragazzo gioca a calcio con gli amici, poi mangia un tramezzino con l'uovo.", voice: "Per arrivare più lontano." },
+                            { time: '20-22 SEC', label: 'SCENA 10', desc: "Un ragazzo gioca a calcio con gli amici, poi mangia un tramezzino con l'uovo.", voice: "Per arrivare piÃ¹ lontano." },
                             { time: '22-24 SEC', label: 'SCENA 11', desc: "Bambino che ride con la bocca sporca, nello sfondo si intravede venezia.", voice: "Serve un equilibrio che dura." },
                             { time: '24-26 SEC', label: 'SCENA 12', desc: "ritorno alla cura e selezione delle uova da parte degli operatori.", voice: "Selezionato con rigore... uovo dopo uovo." },
                             { time: '26-28 SEC', label: 'SCENA 13', desc: "Tutte le confezioni delle uova Alma Uova posizionate sul tavolo.", voice: "Corriamo al tuo fianco... ogni giorno." },
@@ -242,7 +242,7 @@ function PresentationContent() {
                         ].map((step, idx) => (
                             <div key={idx} className="flex flex-col md:flex-row gap-6 items-center bg-white p-4 rounded-[2rem] border border-slate-100 shadow-sm">
                                 <div className="w-full md:w-1/3 aspect-video bg-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                                    <MediaUploader
+                                    <img src={`/storyboard/${sceneImages[idx]}`} alt={`Scena ${idx + 1}`} className="w-full h-full object-cover" /><!-- MediaUploader
                                         initialUrl={data.media[`storyMedia${idx}`] || ''}
                                         onUploadSuccess={(url) => handleMediaUpload(`storyMedia${idx}`, url)}
                                         isEditing={isEditing}
@@ -321,20 +321,20 @@ function PresentationContent() {
                     <div className="space-y-5 mb-10 text-sm">
                         <div className="flex justify-between border-b border-slate-100 pb-3 font-medium">
                             <span className="text-slate-500">Strategia, Regia e Comunicazione</span>
-                            <span className="font-bold">700 €</span>
+                            <span className="font-bold">700 â‚¬</span>
                         </div>
                         <div className="flex justify-between border-b border-slate-100 pb-3 font-medium">
                             <span className="text-slate-500">Shooting e Realizzazione Video</span>
-                            <span className="font-bold">1.400 €</span>
+                            <span className="font-bold">1.400 â‚¬</span>
                         </div>
                         <div className="flex justify-between border-b border-slate-100 pb-3 font-medium">
                             <span className="text-slate-500">Post-produzione, Sound Design e Voiceover</span>
-                            <span className="font-bold">1.400 €</span>
+                            <span className="font-bold">1.400 â‚¬</span>
                         </div>
                     </div>
 
                     <div className="text-center bg-slate-50 p-8 rounded-3xl mb-10">
-                        <div className="text-6xl font-black text-slate-900 tracking-tighter">3.500 €</div>
+                        <div className="text-6xl font-black text-slate-900 tracking-tighter">3.500 â‚¬</div>
                         <p className="text-[10px] font-bold text-slate-400 mt-2 uppercase tracking-widest">Prezzo Finito (Escluso IVA)</p>
                     </div>
 
