@@ -48,7 +48,7 @@ function PresentationContent() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('/api/data');
+            const response = await fetch('/data/data.json'); // Fetch the static JSON file directly
             if (response.ok) {
                 const jsonData = await response.json();
                 setData(jsonData);
