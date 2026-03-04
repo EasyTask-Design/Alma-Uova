@@ -276,19 +276,16 @@ function PresentationContent() {
                 </div>
             </section>
 
-            {/* Sezione Music & Sound Selection */}
             <section className="px-4 mb-20 bg-slate-50 py-16 rounded-[3rem] border border-slate-100">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-2xl font-black mb-6 italic uppercase tracking-tighter text-center">Music & Sound Selection</h2>
                     
-                    <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl mx-auto">
                         {[
-        { file: 'Alma Uova-Rock-2.mp3', title: 'ROCK' },
-        { file: 'Alma Uova-groovey.mp3', title: 'GROOVE' },
-        { file: 'Alma Uova-crescendo-2.mp3', title: 'CRESCENDO' },
-        { file: 'Alma Uova-crescendo-3.mp3', title: 'CRESCENDO 2' },
-        { custom: true, title: 'BRANO CUSTOM' },
-    ].map((item, idx) => (
+                            { file: 'Groovey.mp3', title: 'GROOVEY' },
+                            { file: 'Drums.mp3', title: 'DRUMS' },
+                            { file: 'L’uovo-Crescendo.mp3', title: 'CRESCENDO' },
+                        ].map((item, idx) => (
                             <div key={idx} className="bg-white rounded-[2rem] shadow-sm border border-slate-100 p-6 flex flex-col items-center">
                                 <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-3 text-amber-600">
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -296,16 +293,9 @@ function PresentationContent() {
                                     </svg>
                                 </div>
                                 <h4 className="font-black uppercase text-xs mb-3 tracking-tight text-center">{item.title}</h4>
-                                {item.custom ? (
-                                    <div className="text-center text-slate-500 text-xs space-y-1">
-                                        <p><strong>Creiamo una canzone ad hoc</strong></p>
-                                        <p className="text-[10px]">Con oppure senza voce cantata. Possiamo usare un'attrice/attore per il parlato professionale.</p>
-                                    </div>
-                                ) : (
-                                    <audio controls className="w-full">
-                                        <source src={`/music/${item.file}`} type="audio/mpeg" />
-                                    </audio>
-                                )}
+                                <audio controls className="w-full">
+                                    <source src={`/music/${item.file}`} type="audio/mpeg" />
+                                </audio>
                             </div>
                         ))}
                     </div>
